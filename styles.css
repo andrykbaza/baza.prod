@@ -1,5 +1,5 @@
 
-/* Загальні налаштування */
+/* General styles */
 body {
     font-family: 'Balsamiq Sans', sans-serif;
     margin: 0;
@@ -8,24 +8,20 @@ body {
     color: #fff;
 }
 
-/* Анімація заголовків */
-h1, h2 {
-    animation: fadeInDown 1s ease-in-out;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+/* Header styles */
+.header {
+    text-align: center;
+    padding: 2em;
+    background: linear-gradient(90deg, #6a0dad, #8a2be2);
 }
 
-@keyframes fadeInDown {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.header .logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 1em;
 }
 
-/* Галерея */
+/* Gallery styles */
 .gallery {
     text-align: center;
     padding: 2em;
@@ -46,7 +42,7 @@ h1, h2 {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Секція Послуги */
+/* Services section */
 .services {
     text-align: center;
     padding: 2em;
@@ -81,7 +77,7 @@ h1, h2 {
     transform: translateY(-5px);
 }
 
-/* Секція Контакти */
+/* Contact section */
 .contact {
     text-align: center;
     padding: 2em;
@@ -97,4 +93,11 @@ h1, h2 {
 
 .contact a:hover {
     text-decoration: underline;
+}
+
+/* Google Maps */
+.map-container {
+    margin-top: 1em;
+    border-radius: 10px;
+    overflow: hidden;
 }
