@@ -28,12 +28,32 @@ body {
     max-width: 300px;
     margin: 1em;
     border-radius: 10px;
+    animation: float 3s ease-in-out infinite;
 }
 
-.services,
-.contact {
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.services {
     text-align: center;
     padding: 2em;
+}
+
+.services .service-list {
+    list-style: none;
+    padding: 0;
+}
+
+.services .service-list li {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+    color: #8a2be2;
 }
 
 .btn {
@@ -43,8 +63,23 @@ body {
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
+    margin-top: 1em;
 }
 
 .btn:hover {
     background: #8a2be2;
+}
+
+.contact {
+    text-align: center;
+    padding: 2em;
+}
+
+.contact a {
+    color: #8a2be2;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
 }
