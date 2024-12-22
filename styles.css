@@ -97,14 +97,15 @@ body {
 /* === Секція Наші артисти === */
 #artists {
     text-align: center;
-    padding: 50px 20px;
+    padding: 70px 20px;
     background: linear-gradient(135deg, #6a0dad, #b565f7);
     color: #fff;
+    margin-top: 40px;
 }
 
 #artists h2 {
     font-size: 2.5em;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -129,6 +130,10 @@ body {
     max-width: 300px;
     text-align: center;
     flex: 1 1 calc(33.333% - 20px); /* Три карточки в рядок */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 450px; /* Забезпечення однакової висоти */
 }
 
 .artist-card:hover {
@@ -155,7 +160,8 @@ body {
 .artist-card p {
     font-size: 1em;
     margin: 0 15px 15px;
-    color: #666;
+    color: #555;
+    flex-grow: 1;
 }
 
 /* Посилання для докладного перегляду */
@@ -186,6 +192,7 @@ body {
         flex: 1 1 100%; /* Одна карточка в рядок */
     }
 }
+
 
 
 /* Google Maps */
