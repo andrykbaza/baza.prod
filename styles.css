@@ -36,11 +36,34 @@ body {
 .services {
     text-align: center;
     padding: 3em 1em;
-    background: #1e1e1e;
+    background: url('bazatable.png') no-repeat center center/cover;
     border-radius: 8px;
     margin: 2em auto;
     max-width: 1200px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Темний шар для кращої читабельності тексту */
+.services::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Темний напівпрозорий шар */
+    z-index: 1;
+}
+
+/* Стилі для контенту поверх фону */
+.services h2,
+.services .service-list,
+.services .btn {
+    position: relative;
+    z-index: 2;
 }
 
 .services h2 {
@@ -57,7 +80,7 @@ body {
 .services .service-list li {
     font-size: 1.2em;
     margin: 0.5em 0;
-    color: #ccc;
+    color: #fff;
 }
 
 .btn {
@@ -75,6 +98,7 @@ body {
     background: #8a2be2;
     transform: translateY(-5px);
 }
+
 
 /* === Секція Контакти === */
 .contact {
