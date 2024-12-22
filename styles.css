@@ -185,7 +185,7 @@ body {
     display: inline-block;
     margin-bottom: 15px;
     padding: 8px 16px;
-    background: #e4405f; /* Колір Instagram */
+    background: #6a0dad; /* Фіолетовий колір для гармонії */
     color: #fff;
     text-decoration: none;
     font-weight: bold;
@@ -194,7 +194,7 @@ body {
 }
 
 .artist-instagram:hover {
-    background: #c13584;
+    background: #8a2be2; /* Світліший фіолетовий при наведенні */
     transform: translateY(-3px);
 }
 
