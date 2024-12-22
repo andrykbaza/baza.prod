@@ -98,6 +98,88 @@ body {
     background: #8a2be2;
     transform: translateY(-5px);
 }
+/* Стилі для контенту поверх фону */
+.services h2,
+.services .service-list,
+.services .btn {
+    position: relative;
+    z-index: 2;
+}
+
+.services h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: #b565f7;
+}
+
+.services .service-list {
+    list-style: none;
+    padding: 0;
+}
+
+.services .service-list li {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+    color: #fff;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 10px 20px;
+    background: #6a0dad;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background: #8a2be2;
+    transform: translateY(-5px);
+}
+
+
+/* Стилі для контенту поверх фону */
+.services h2,
+.services .service-list,
+.services .btn {
+    position: relative;
+    z-index: 2;
+}
+
+.services h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: #b565f7;
+}
+
+.services .service-list {
+    list-style: none;
+    padding: 0;
+}
+
+.services .service-list li {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+    color: #fff;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 10px 20px;
+    background: #6a0dad;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background: #8a2be2;
+    transform: translateY(-5px);
+}
 
 
 /* === Секція Контакти === */
