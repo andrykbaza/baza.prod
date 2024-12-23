@@ -324,3 +324,89 @@ body {
     background-size: cover;
 }
 
+/* === Модальне вікно === */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    color: #333;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content h3 {
+    margin-top: 0;
+    font-size: 1.8em;
+    color: #6a0dad;
+}
+
+.modal-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.modal-content ul li {
+    margin: 5px 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #6a0dad;
+}
+
+.close-btn:hover {
+    color: #8a2be2;
+}
+
+/* Анімація для модальних вікон */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Стилі для кнопок послуг */
+.service-btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background: #6a0dad;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.service-btn:hover {
+    background: #8a2be2;
+    transform: translateY(-3px);
+}
+
+
