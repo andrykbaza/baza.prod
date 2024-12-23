@@ -217,29 +217,10 @@ body {
     letter-spacing: 1px;
 }
 
-/* === Секція Instagram Відео === */
-#instagram-videos {
-    text-align: center;
-    padding: 3em 1em;
-    background: #1e1e1e;
-    border-radius: 8px;
-    margin: 2em auto;
-    max-width: 1200px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-#instagram-videos h2 {
-    font-size: 2.5em;
-    margin-bottom: 1em;
-    color: #b565f7;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
 /* === Сітка для Instagram Відео === */
 .instagram-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Дві колонки */
+    grid-template-columns: repeat(2, 1fr); /* Два стовпчики */
     grid-gap: 20px;
     justify-content: center;
     align-items: stretch;
@@ -253,7 +234,8 @@ body {
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    aspect-ratio: 16 / 9; /* Правильне співвідношення сторін */
+    aspect-ratio: 16 / 9; /* Фіксоване співвідношення сторін */
+    width: 100%;
     max-width: 100%;
 }
 
@@ -270,10 +252,10 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* === Адаптивний дизайн === */
+/* === Адаптивність === */
 @media (max-width: 768px) {
     .instagram-grid {
-        grid-template-columns: repeat(1, 1fr); /* Одна колонка на планшетах */
+        grid-template-columns: 1fr; /* Один стовпчик на планшетах */
     }
 
     #instagram-videos h2 {
