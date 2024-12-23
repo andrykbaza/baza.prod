@@ -223,19 +223,19 @@ body {
     grid-template-columns: repeat(2, 1fr); /* Два стовпчики */
     grid-gap: 20px;
     justify-content: center;
-    align-items: stretch;
+    align-items: start;
     margin: 0 auto;
 }
 
-/* Стилі для відео-картки */
+/* Відео у повний розмір */
 .instagram-video {
     background: #252525;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    aspect-ratio: 16 / 9; /* Фіксоване співвідношення сторін */
     width: 100%;
+    aspect-ratio: 1 / 1.2; /* Пропорція для Instagram постів */
     max-width: 100%;
 }
 
@@ -244,6 +244,7 @@ body {
     height: 100%;
     border: none;
     border-radius: 12px;
+    overflow: hidden;
 }
 
 /* Анімація при наведенні */
@@ -252,7 +253,7 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* === Адаптивність === */
+/* Адаптивність для планшетів */
 @media (max-width: 768px) {
     .instagram-grid {
         grid-template-columns: 1fr; /* Один стовпчик на планшетах */
@@ -261,14 +262,19 @@ body {
     #instagram-videos h2 {
         font-size: 2em;
     }
+
+    .instagram-video {
+        aspect-ratio: 1 / 1.5; /* Вертикальне співвідношення на планшетах */
+    }
 }
 
+/* Адаптивність для мобільних */
 @media (max-width: 480px) {
     #instagram-videos h2 {
         font-size: 1.8em;
     }
 
     .instagram-video {
-        aspect-ratio: 4 / 5; /* Вертикальний формат для мобільних */
+        aspect-ratio: 1 / 1.8; /* Вертикальне співвідношення для мобільних */
     }
 }
