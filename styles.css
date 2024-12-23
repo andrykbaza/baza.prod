@@ -347,16 +347,14 @@ body {
     }
 }
 
-
 /* === Секція Instagram Відео === */
 #instagram-videos {
     text-align: center;
-    padding: 3em 0;
+    padding: 3em 1em;
     background: #1e1e1e;
     border-radius: 8px;
-    margin: 2em auto 0;
-    width: 100vw;
-    max-width: 100%;
+    margin: 2em auto;
+    max-width: 1200px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -370,11 +368,11 @@ body {
 
 /* === Сітка для Instagram Відео === */
 .instagram-grid {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Два стовпчики */
     gap: 20px;
-    align-items: center;
-    width: 100%;
+    justify-content: center;
+    align-items: start;
 }
 
 /* === Відео === */
@@ -385,7 +383,6 @@ body {
     background: #000;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     width: 100%;
-    max-width: 100%;
     aspect-ratio: 16 / 9; /* Пропорції відео */
 }
 
@@ -399,22 +396,24 @@ body {
 
 /* === Адаптивність === */
 @media (max-width: 992px) {
+    .instagram-grid {
+        grid-template-columns: 1fr; /* Один стовпчик на планшетах і мобільних */
+    }
+
     #instagram-videos h2 {
         font-size: 2em;
     }
 }
 
 @media (max-width: 600px) {
+    .instagram-video {
+        aspect-ratio: 16 / 10; /* Трохи вищі відео на мобільних пристроях */
+    }
+
     #instagram-videos h2 {
         font-size: 1.8em;
     }
-
-    .instagram-video {
-        aspect-ratio: 16 / 10; /* Трохи більше місця на мобільних */
-    }
 }
-
-
 
 
 /* === Модальне вікно === */
