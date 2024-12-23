@@ -219,34 +219,33 @@ body {
 
 /* Контейнер для відео */
 .instagram-video-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    justify-content: center;
-    align-items: stretch;
+    justify-items: center;
 }
 
-/* Оформлення окремого відео */
+/* Оформлення відео-картки */
 .instagram-video {
     background: #252525;
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    flex: 1 1 calc(33.333% - 20px);
-    max-width: 300px;
-    text-align: center;
-    height: 400px;
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 16 / 9; /* Забезпечує правильне співвідношення сторін */
+    position: relative;
 }
 
 .instagram-video iframe {
     width: 100%;
     height: 100%;
-    border-radius: 8px;
     border: none;
+    border-radius: 12px;
 }
 
-/* Анімація при наведенні */
+/* Ефект при наведенні */
 .instagram-video:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
@@ -254,28 +253,21 @@ body {
 
 /* Адаптивний дизайн */
 @media (max-width: 768px) {
+    #instagram-videos h2 {
+        font-size: 2em;
+    }
+
     .instagram-video {
-        flex: 1 1 calc(50% - 20px);
+        max-width: 100%;
     }
 }
 
 @media (max-width: 480px) {
+    #instagram-videos h2 {
+        font-size: 1.8em;
+    }
+
     .instagram-video {
-        flex: 1 1 100%;
-    }
-}
-
-
-
-/* === Адаптивний дизайн === */
-@media (max-width: 768px) {
-    .artist-card {
-        flex: 1 1 calc(50% - 20px);
-    }
-}
-
-@media (max-width: 480px) {
-    .artist-card {
-        flex: 1 1 100%;
+        aspect-ratio: 4 / 5; /* Вертикальний формат для мобільних */
     }
 }
