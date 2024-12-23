@@ -1,3 +1,4 @@
+
 /* === Загальні стилі === */
 body {
     font-family: 'Syne', sans-serif;
@@ -81,6 +82,28 @@ body {
     color: #fff;
 }
 
+/* === Кнопка "Записатись" === */
+.main-btn {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 12px 24px;
+    background: #ff9800;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.main-btn:hover {
+    background: #e68900;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
 /* === Кнопки послуг === */
 .service-btn {
     display: inline-block;
@@ -100,38 +123,7 @@ body {
     transform: translateY(-3px);
 }
 
-/* === Секція Контакти === */
-.contact {
-    text-align: center;
-    padding: 3em 1em;
-    background: #121212;
-    border-radius: 8px;
-    margin: 2em auto;
-    max-width: 1200px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-.contact h2 {
-    font-size: 2em;
-    margin-bottom: 1em;
-    color: #b565f7;
-}
-
-.contact p {
-    font-size: 1em;
-    margin: 0.5em 0;
-}
-
-.contact a {
-    color: #b565f7;
-    text-decoration: none;
-}
-
-.contact a:hover {
-    text-decoration: underline;
-}
-
-/* === Секція Наші Артисти === */
+/* === Секція Наші Артисти (Baza.prod CREW) === */
 #artists {
     text-align: center;
     padding: 3em 1em;
@@ -151,8 +143,8 @@ body {
 }
 
 .artists-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
     justify-content: center;
     align-items: stretch;
@@ -164,16 +156,39 @@ body {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-width: 300px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     min-height: 450px;
 }
 
-.artist-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+.artist-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 3px solid #6a0dad;
 }
+
+.artist-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.platform-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+}
+
+.instagram-btn { background: url('instagram.png') no-repeat center center; }
+.youtube-btn { background: url('youtube.png') no-repeat center center; }
+.apple-btn { background: url('apple-music.png') no-repeat center center; }
+.spotify-btn { background: url('spotify.png') no-repeat center center; }
 
 /* === Секція Instagram Відео === */
 .instagram-grid {
@@ -181,14 +196,14 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     justify-content: center;
-    align-items: stretch;
 }
 
 .instagram-video {
     width: 100%;
     aspect-ratio: 16 / 9;
-    border-radius: 12px;
     overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .instagram-video iframe {
@@ -217,18 +232,5 @@ body {
     border-radius: 8px;
     padding: 20px;
     max-width: 500px;
-    animation: fadeIn 0.3s ease-in-out;
-}
-
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 1.5em;
-    cursor: pointer;
-    color: #6a0dad;
-}
-
-.close-btn:hover {
-    color: #8a2be2;
+    text-align: center;
 }
