@@ -351,11 +351,12 @@ body {
 /* === Секція Instagram Відео === */
 #instagram-videos {
     text-align: center;
-    padding: 3em 1em;
+    padding: 3em 0;
     background: #1e1e1e;
     border-radius: 8px;
-    margin: 2em auto;
-    max-width: 1200px;
+    margin: 2em auto 0;
+    width: 100vw;
+    max-width: 100%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -369,14 +370,14 @@ body {
 
 /* === Сітка для Instagram Відео === */
 .instagram-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Два відео в рядок */
+    display: flex;
+    flex-direction: column;
     gap: 20px;
-    justify-content: center;
-    align-items: start;
+    align-items: center;
+    width: 100%;
 }
 
-/* === Оформлення відео === */
+/* === Відео === */
 .instagram-video {
     position: relative;
     overflow: hidden;
@@ -384,40 +385,35 @@ body {
     background: #000;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     width: 100%;
-    height: 400px; /* Фіксована висота для кращого вигляду */
+    max-width: 100%;
+    aspect-ratio: 16 / 9; /* Пропорції відео */
 }
 
 .instagram-video iframe {
     width: 100%;
     height: 100%;
     border: none;
+    border-radius: 8px;
     display: block;
 }
 
 /* === Адаптивність === */
 @media (max-width: 992px) {
-    .instagram-grid {
-        grid-template-columns: 1fr; /* Одне відео в рядок на планшетах */
-    }
-
-    .instagram-video {
-        height: 350px; /* Зменшена висота для планшетів */
-    }
-
     #instagram-videos h2 {
         font-size: 2em;
     }
 }
 
 @media (max-width: 600px) {
-    .instagram-video {
-        height: 300px; /* Менша висота для мобільних */
-    }
-
     #instagram-videos h2 {
         font-size: 1.8em;
     }
+
+    .instagram-video {
+        aspect-ratio: 16 / 10; /* Трохи більше місця на мобільних */
+    }
 }
+
 
 
 
