@@ -274,19 +274,57 @@ body {
     transform: translateY(-3px);
 }
 
-/* Стилі активних іконок */
-.instagram-btn { background: url('instagram.png') no-repeat center center; }
-.youtube-btn { background: url('youtube.png') no-repeat center center; }
-.apple-btn { background: url('apple-music.png') no-repeat center center; }
-.spotify-btn { background: url('spotify.png') no-repeat center center; }
+/* === Посилання на платформи артистів === */
+.artist-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
 
-/* Стилі неактивних іконок */
-.inactive {
+/* Базові стилі іконок */
+.platform-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Анімація при наведенні */
+.platform-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Іконки соцмереж */
+.instagram-btn {
+    background: url('instagram.png') no-repeat center center;
+    background-size: contain;
+}
+
+.youtube-btn {
+    background: url('youtube.png') no-repeat center center;
+    background-size: contain;
+}
+
+.apple-btn {
+    background: url('apple-music.png') no-repeat center center;
+    background-size: contain;
+}
+
+.spotify-btn {
+    background: url('spotify.png') no-repeat center center;
+    background-size: contain;
+}
+
+/* Стилі для неактивних іконок */
+.platform-btn.inactive {
     filter: grayscale(100%);
     opacity: 0.5;
     cursor: not-allowed;
 }
-
 
 /* === Адаптивність для мобільних пристроїв === */
 @media (max-width: 768px) {
