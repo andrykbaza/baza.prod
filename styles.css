@@ -129,6 +129,81 @@ body {
     transform: translateY(-3px);
 }
 
+/* === Секція Контакти === */
+.contact {
+    text-align: center;
+    padding: 2em 1.5em;
+    background: #1e1e1e;
+    border: 2px solid #6a0dad; /* Фіолетова рамка */
+    border-radius: 12px;
+    margin: 2em auto;
+    max-width: 800px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Заголовок секції */
+.contact h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: #b565f7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Текстові блоки */
+.contact p {
+    font-size: 1.1em;
+    margin: 0.5em 0;
+    color: #ddd;
+}
+
+/* Посилання */
+.contact a {
+    color: #b565f7;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact a:hover {
+    color: #8a2be2;
+    text-decoration: underline;
+}
+
+/* Карта у секції контакти */
+.map-container {
+    margin-top: 1.5em;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 768px) {
+    .contact {
+        padding: 1.5em 1em;
+    }
+
+    .contact h2 {
+        font-size: 1.8em;
+    }
+
+    .contact p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact h2 {
+        font-size: 1.6em;
+    }
+
+    .contact p {
+        font-size: 0.9em;
+    }
+}
+
+
 /* === Секція Наші Артисти (Baza.prod CREW) === */
 #artists {
     text-align: center;
