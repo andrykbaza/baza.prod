@@ -278,3 +278,49 @@ body {
         aspect-ratio: 1 / 1.8; /* Вертикальне співвідношення для мобільних */
     }
 }
+/* === Стилі для кнопок платформ артиста === */
+.artist-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.platform-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.platform-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Іконки платформ */
+.instagram-btn {
+    background: url('instagram.png') no-repeat center center;
+    background-size: cover;
+}
+
+.youtube-btn {
+    background: url('youtube.png') no-repeat center center;
+    background-size: cover;
+}
+
+.apple-btn {
+    background: url('apple-music.png') no-repeat center center;
+    background-size: cover;
+}
+
+.spotify-btn {
+    background: url('spotify.png') no-repeat center center;
+    background-size: cover;
+}
+
