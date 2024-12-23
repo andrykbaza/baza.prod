@@ -42,3 +42,9 @@ window.addEventListener('click', (event) => {
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Сторінка повністю завантажена');
 });
+
+// Центрування відео при завантаженні
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('Сторінка повністю завантажена');
+});
+
