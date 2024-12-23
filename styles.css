@@ -53,6 +53,7 @@ body {
     overflow: hidden;
 }
 
+/* Темний шар для кращої читабельності тексту */
 .services::before {
     content: '';
     position: absolute;
@@ -64,6 +65,7 @@ body {
     z-index: 1;
 }
 
+/* Стилі для контенту поверх фону */
 .services h2,
 .services .service-list,
 .services .btn {
@@ -80,13 +82,51 @@ body {
 .services .service-list {
     list-style: none;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
 }
 
 .services .service-list li {
-    font-size: 1.2em;
-    margin: 0.5em 0;
-    color: #fff;
+    margin: 10px;
 }
+
+/* Стилі для кнопок послуг */
+.service-btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: #6a0dad;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.service-btn:hover {
+    background: #8a2be2;
+    transform: translateY(-3px);
+}
+
+/* Адаптивність для кнопок послуг */
+@media (max-width: 768px) {
+    .services .service-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-btn {
+        width: 80%;
+        font-size: 1em;
+    }
+}
+
 
 /* === Секція CTA (Call-To-Action) === */
 #cta {
