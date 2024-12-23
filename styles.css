@@ -383,21 +383,25 @@ body {
     background: #000;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     width: 100%;
-    aspect-ratio: 16 / 9; /* Пропорції відео */
+    height: 600px; /* Вертикальна висота для відео */
 }
 
 .instagram-video iframe {
     width: 100%;
     height: 100%;
     border: none;
-    border-radius: 8px;
     display: block;
+    object-fit: cover;
 }
 
 /* === Адаптивність === */
 @media (max-width: 992px) {
     .instagram-grid {
-        grid-template-columns: 1fr; /* Один стовпчик на планшетах і мобільних */
+        grid-template-columns: 1fr; /* Один стовпчик на планшетах */
+    }
+
+    .instagram-video {
+        height: 500px; /* Менша висота на планшетах */
     }
 
     #instagram-videos h2 {
@@ -407,7 +411,7 @@ body {
 
 @media (max-width: 600px) {
     .instagram-video {
-        aspect-ratio: 16 / 10; /* Трохи вищі відео на мобільних пристроях */
+        height: 450px; /* Оптимальна висота для мобільних пристроїв */
     }
 
     #instagram-videos h2 {
