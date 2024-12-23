@@ -370,7 +370,7 @@ body {
 /* === Сітка для Instagram Відео === */
 .instagram-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Адаптивна сітка */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 20px;
     justify-content: center;
     align-items: stretch;
@@ -392,6 +392,12 @@ body {
     border: none;
     border-radius: 8px;
     display: block;
+}
+
+/* Видаляємо рамки та прокрутку */
+.instagram-video iframe {
+    overflow: hidden;
+    pointer-events: none;
 }
 
 /* === Адаптивність === */
