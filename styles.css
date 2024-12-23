@@ -46,7 +46,6 @@ body {
     overflow: hidden;
 }
 
-/* Темний шар для кращої читабельності тексту */
 .services::before {
     content: '';
     position: absolute;
@@ -54,11 +53,10 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Темний напівпрозорий шар */
+    background: rgba(0, 0, 0, 0.6);
     z-index: 1;
 }
 
-/* Стилі для контенту поверх фону */
 .services h2,
 .services .service-list,
 .services .btn {
@@ -83,20 +81,23 @@ body {
     color: #fff;
 }
 
-.btn {
+/* === Кнопки послуг === */
+.service-btn {
     display: inline-block;
-    margin-top: 1em;
+    margin: 10px;
     padding: 10px 20px;
     background: #6a0dad;
     color: #fff;
     text-decoration: none;
+    border: none;
     border-radius: 5px;
-    transition: background 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
 }
 
-.btn:hover {
+.service-btn:hover {
     background: #8a2be2;
-    transform: translateY(-5px);
+    transform: translateY(-3px);
 }
 
 /* === Секція Контакти === */
@@ -149,7 +150,6 @@ body {
     letter-spacing: 2px;
 }
 
-/* Контейнер для карточок артистів */
 .artists-container {
     display: flex;
     flex-wrap: wrap;
@@ -158,7 +158,6 @@ body {
     align-items: stretch;
 }
 
-/* Оформлення кожної карточки артиста */
 .artist-card {
     background: #252525;
     color: #fff;
@@ -168,10 +167,6 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     max-width: 300px;
     text-align: center;
-    flex: 1 1 calc(33.333% - 20px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     min-height: 450px;
 }
 
@@ -180,148 +175,26 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Instagram посилання для артистів */
-.artist-instagram {
-    display: inline-block;
-    margin-bottom: 15px;
-    padding: 8px 16px;
-    background: #6a0dad; /* Фіолетовий колір для гармонії */
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.artist-instagram:hover {
-    background: #8a2be2; /* Світліший фіолетовий при наведенні */
-    transform: translateY(-3px);
-}
-
 /* === Секція Instagram Відео === */
-#instagram-videos {
-    text-align: center;
-    padding: 3em 1em;
-    background: #1e1e1e;
-    border-radius: 8px;
-    margin: 2em auto;
-    max-width: 1200px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-#instagram-videos h2 {
-    font-size: 2.5em;
-    margin-bottom: 1em;
-    color: #b565f7;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* === Сітка для Instagram Відео === */
 .instagram-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Два стовпчики */
-    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
     justify-content: center;
-    align-items: start;
-    margin: 0 auto;
+    align-items: stretch;
 }
 
-/* Відео у повний розмір */
 .instagram-video {
-    background: #252525;
+    width: 100%;
+    aspect-ratio: 16 / 9;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%;
-    aspect-ratio: 1 / 1.2; /* Пропорція для Instagram постів */
-    max-width: 100%;
 }
 
 .instagram-video iframe {
     width: 100%;
     height: 100%;
     border: none;
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-/* Анімація при наведенні */
-.instagram-video:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* Адаптивність для планшетів */
-@media (max-width: 768px) {
-    .instagram-grid {
-        grid-template-columns: 1fr; /* Один стовпчик на планшетах */
-    }
-
-    #instagram-videos h2 {
-        font-size: 2em;
-    }
-
-    .instagram-video {
-        aspect-ratio: 1 / 1.5; /* Вертикальне співвідношення на планшетах */
-    }
-}
-
-/* Адаптивність для мобільних */
-@media (max-width: 480px) {
-    #instagram-videos h2 {
-        font-size: 1.8em;
-    }
-
-    .instagram-video {
-        aspect-ratio: 1 / 1.8; /* Вертикальне співвідношення для мобільних */
-    }
-}
-/* === Стилі для кнопок платформ артиста === */
-.artist-links {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.platform-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
-    background-position: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.platform-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-/* Іконки платформ */
-.instagram-btn {
-    background: url('instagram.png') no-repeat center center;
-    background-size: cover;
-}
-
-.youtube-btn {
-    background: url('youtube.png') no-repeat center center;
-    background-size: cover;
-}
-
-.apple-btn {
-    background: url('apple-music.png') no-repeat center center;
-    background-size: cover;
-}
-
-.spotify-btn {
-    background: url('spotify.png') no-repeat center center;
-    background-size: cover;
 }
 
 /* === Модальне вікно === */
@@ -342,27 +215,9 @@ body {
     background: #fff;
     color: #333;
     border-radius: 8px;
-    width: 90%;
-    max-width: 500px;
     padding: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    text-align: center;
+    max-width: 500px;
     animation: fadeIn 0.3s ease-in-out;
-}
-
-.modal-content h3 {
-    margin-top: 0;
-    font-size: 1.8em;
-    color: #6a0dad;
-}
-
-.modal-content ul {
-    list-style: none;
-    padding: 0;
-}
-
-.modal-content ul li {
-    margin: 5px 0;
 }
 
 .close-btn {
@@ -377,36 +232,3 @@ body {
 .close-btn:hover {
     color: #8a2be2;
 }
-
-/* Анімація для модальних вікон */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Стилі для кнопок послуг */
-.service-btn {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 20px;
-    background: #6a0dad;
-    color: #fff;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
-}
-
-.service-btn:hover {
-    background: #8a2be2;
-    transform: translateY(-3px);
-}
-
-
